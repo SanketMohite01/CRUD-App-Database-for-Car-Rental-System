@@ -1,0 +1,54 @@
+create database crudapp;
+use crudapp;
+CREATE TABLE employee (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+insert into employee values(1,"admin","admin123");
+insert into employee values(2,"jeevan","jeevan");
+
+insert into employee values(3,"","");
+select * from employee;
+
+drop table employee;
+
+
+create table carlist(
+Reg_Id varchar(50) not null unique,
+Brand varchar(40) not null ,
+Model varchar(40) not null,
+Sta varchar(59) not null,
+Price int
+);
+insert into carlist values("F21SE","Musktank","cargo","Available",3245);
+select * from carlist;
+drop table carlist;
+
+
+
+create table Customers(
+Cus_Id int not null unique,
+Cust_Name varchar(40) not null ,
+Cus_address varchar(40) not null,
+Cus_Contact varchar(12)
+);
+drop table Customers;
+insert into Customers values(1,"Abhijeet","Solapur",9284191148);
+select * from Customers;
+
+
+
+
+create table Canrent(
+id int not null unique,
+Regid varchar(40) not null,
+CusName varchar(40) not null,
+rentdate varchar(50),
+returndate varchar(40) not null,
+rentfees int not null,
+retrunstatus varchar(40)
+);
+drop table Canrent;
+insert into Canrent values(1,"Abc123","Abhijeet","10-09-24","31-09-24",765,"Return");
+select * from Canrent;
